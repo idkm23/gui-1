@@ -1,0 +1,52 @@
+html {
+ text-align: center;
+ background-image: url(../res/HEAD.png);
+ /* scales the image down to make an interesting tiled pattern. */
+ background-size: 15px auto;
+}
+
+body {
+ display: inline-block;
+ /* centers the body with auto margins. */
+ margin: 100px auto;
+ background-color: #FFF;
+ font-size: 25px;
+ border: 1px solid #800;
+ color: #800;
+}
+
+h3 {
+ background-color: #fca;
+ padding: 5px;
+ margin: 0;
+}
+
+ul {
+ padding: 0;
+ margin: 0;
+ /* removes bullets from the buttons. */
+ list-style-type: none;
+}
+
+li {
+ display: inline-block;
+ border: 2px outset #FCA;
+ margin: 30px;
+ margin-left: 0;
+ padding: 5px;
+ background-color: #FCA;
+}
+
+#first {
+ margin-left: 30px;
+}
+
+/* On hover, makes my links look like pressable buttons using borders. */
+li:hover {
+ border: 2px inset #FCA;
+}
+
+a, a:hover, a:visited {
+ text-decoration: none;
+ color: #990003;
+}

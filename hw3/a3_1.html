@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+Name: Christopher Munroe, christopher_munroe1@student.uml.edu
+Student of COMP.4610 GUI Programming I
+Created: 10/10/2017
+
+First version of the document. Attempts to make the document feel like a terminal.
+-->
+<html lang="en">
+ <head>
+  <!-- includes a custom font from google's font library -->
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/style_1.css">
+  <title>
+    Assignment 3
+  </title>
+ </head>
+ <body>
+  <!-- Creates a clickable image of my face which takes you to my personal website -->
+  <a href="http://cmunroe.com"><img src="res/HEAD.png" alt="headimg"/></a>
+  <h3>COMP 4610 GUI I</h3>
+  <!-- Puts ids on headers to give me finer control on the margins to match the doc -->
+  <h3 id="asgn-name">Assignment No. 3</h3>
+  <h3 id="demo" >Demo Styles With CSS</h3>
+  <span id="due-date">
+   <br />
+   <i>Date Due: </i><b>Thursday, October 19, 2016</b>
+  </span>
+  <h4>What This Assignment Is About</h4>
+  <p>
+   In this assignment you will improve your ability to build pages that use additional HTML techniques and apply CSS to the page’s HTML to provide some styling experience and comparison among different styling parameters.
+  </p>
+  <p>
+   Information relevant to this assignment appears in <i>CSS: The Missing Manual</i> by David Sawyer MacFarland in Chapters 1-3, 6 and 7. By reading these chapters (or equivalent sources) and looking at examples on <a href="https://www.w3schools.com/">W3Schools</a>, specifically the tutorials at <a href="https://www.w3schools.com/css">www.w3schools.com/css</a> and <a href="https://www.w3schools.com/css3">www.w3schools.com/css3</a> you should be able to fulfill the requirements.
+  </p>
+  <h4>What You Are To Do</h4>
+  <p>
+   A publisher has hired you to create a demo for their designers to shows them how different color-, font-, formatting-, and spacing choices impact the final readability and usability of a document. To accomplish that, they requested that you create at least three variations of the same content, but with modified style choices, as follows:
+  </p>
+  <ol>
+   <li>
+    The demo content will be the content of <b>this assignment’s document</b> (yes, the document you are reading now). The only difference is that you should add at least one image (small or larger, simple or sophisticated, it doesn’t matter), and you should show some styling differences about that image.
+   </li>
+   <li>
+    You are to create at least three versions of this document; the content will be identical but the styling of the pages will be different.
+   </li>
+   <li>
+    Your CSS code must be in a separate file from your HTML file, in a subdirectory name <b>css</b>. This is the industry-standard way to organize websites. You might use inline CSS and/or an internal style sheet during development, but you must move all your CSS to a separate, external file before you submit your assignment. That external file should have an extension of <span class="code">.css</span>.
+   </li>
+   <li>
+    Your CSS code must be documented to the same standard we have used for HTML. That is, major sections must be documented to identify what they are styling. You should <b>*not*</b> document each individual CSS rule. Assume that the reader of your documentation knows CSS, but that s/he is not familiar with the way you’re using it.
+ 
+   <li>
+    You must structure your assignment so that the three (or more) demo pages can be reached from a “landing” page, which will have clearly-identified hyperlinks to the demo pages.
+   </li>
+ 
+   <li>
+    Your demo pages must have a variety of examples of different colors (including foreground – i.e., text or content, and background), spacing, padding, borders (color, style, thickness), and any other styling differences you might want to show.
+   </li>
+ 
+   <li>
+    Test both your web page and your CSS code using the W3C Validators:
+    <ul>
+     <li>
+      HTML5 Markup Validation<br />
+      Service: <a href="http://validator.w3.org">http://validator.w3.org</a>
+      or <a href="http://validator.nu">http://validator.nu</a>
+     </li>
+     <li>
+      W3C CSS Validation Service: 
+      <a href="http://jigsaw.w3.org/css-validator">
+       http://jigsaw.w3.org/css-validator
+      </a>
+     </li>
+    </ul>
+    <br />
+    Your code must pass both validators. When it does, add the W3C validation icons to your page.
+   </li>
+  </ol>
+  <h5>Code Review</h5>
+  <ul><li>You can learn an awful lot by just having someone else look at your page and try it out. If you do this assignment before the due date, there is no reason why you can’t ask someone (even a classmate) to review your work for you. I bly suggest that you do this, and that you do so early enough to allow time to make the changes that s/he recommends (if you also agree with them).</li></ul>
+  <h4>Submitting Your Assignment for Grading</h4>
+  <p>
+   Please follow these directions carefully. Incorrectly submitted assignments will not be given appropriate credit.
+  </p>
+  <p>
+   To submit this assignment you must go to our course <u>blackboard</u> and submit prior to the deadline. Please submit all related files and also a <u>link to your styled site</u>.
+  </p>
+  <h4>How You Will Be Graded</h4>
+  <p>
+   This assignment will be graded on a 20-point system with points awarded as follows. Please note that the lists of features provided below are not meant to be exhaustive. They are merely representative of the types of things we are looking for in each grading category. Also note that 4 of the 20 points, or 20% of your grade, is awarded for documentation.
+  </p>
+  <p>
+   Again, I stress that your page need not be the most beautiful page on the Web, although it’s of course fine to strive for that! This is not an art class, and again I am very aware that some students enter this class with significantly more experience with Web programming techniques than others. I bly encourage experienced students to do the basic assignment first and then push themselves to learn and try out new techniques. I encourage inexperienced students to look at others’ work and emulate it where appropriate, of course being sure to cite your references and give credit where credit is due. As always, all students should be able to score all 20 points on this assignment, regardless of what you knew before you took this course. 
+  </p>
+
+  <table>
+   <tr>
+    <th><i>Criteria</i></th>
+    <th><i>Possible Points</i></th>
+   </tr>
+   <tr>
+    <td>
+     <b>Program Integrity / Design</b>
+     <ul>
+      <li>
+       pages display properly as intended from weblab.cs.uml.edu (1 point)
+      </li>
+      <li>
+       source code for all files is visible on the web and/or accessible via links on the assignment or index page (1 point)
+      </li>
+      <li>
+       all CSS resides in a separate file with an extension of
+       <span class="code">.css</span> in a subdirectory named
+       <span class="code">css</span> (2 points)
+      </li>
+      <li>
+       pages exhibit creativity and effort, not just trivial implementations (8 points)
+      </li>
+      <li>
+       pages validate using the
+       <a href="https://validator.w3.org">W3C Markup Validation Service</a>
+       (2 points – submit a screenshot)
+      </li>
+      <li>
+       pages validate using the
+       <a href="https://jigsaw.w3.org/css-validator/">
+        W3C CSS Validation Service
+       </a>
+       (2 points – submit a screenshot)
+      </li>
+     </ul>
+    </td>
+    <td class="points">16</td>
+   </tr>
+   <tr>
+    <td>
+     <b>Source Code Documentation and Formatting</b>
+     <ul>
+      <li>
+       user name and pertinent contact information appear in all source files
+      </li>
+      <li>
+       code is logically organized
+      </li>
+      <li>
+       all files contain adequate explanatory documentation
+      </li>
+      <li>
+       all files have adequate white space for readability
+      </li>
+      <li>
+       all files are properly indented and formatted
+      </li>
+      <li>
+       all documentation is meaningful and does not merely echo code 
+      </li>
+      <li>
+       <b><i>
+        any sources used are cited in comments embedded within code, including the extent they have been used (e.g., as-is, without modifications; modified – explain how modified)
+       </i></b>
+      </li>
+     </ul>
+    </td>
+    <td class="points">4</td>
+   </tr>
+  </table>
+  <span id="afterthought">
+   <i>
+    * This assignment has some elements from a 91.461 assignment by Prof. Heines.
+   </i>
+  </span>
+ </body>
+</html>

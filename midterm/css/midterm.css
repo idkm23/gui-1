@@ -1,0 +1,106 @@
+/**
+ * Name: Christopher Munroe, christopher_munroe1@student.uml.edu
+ * Student of COMP.4610 GUI Programming I
+ * Created: 10/25/2017
+ *
+ * auto deals calculator!
+ * provides two types of options, loans and leases. there are two forms for each type
+ * to allow the user to compare.
+ **/
+
+body {
+  font-size: 16px;
+  font-family: 'helvetica neue', 'helvetica', arial, sans-serif;
+  color: #111;
+  line-height: 1.4;
+
+  /* force scrollbar to make the page elements static when expanding options */
+  overflow-y: scroll;
+}
+
+#main_wrap {
+  width: 353px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #E9E9E9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.loan_form {
+  background: #fff;
+  margin: 13px 0;
+}
+
+.loan_header {
+  padding: 10px;
+  border: 1px solid #aaa;
+  text-align: left;
+  color: #0077ca;
+  font-weight: bold;
+  cursor: pointer;
+
+  /* disables highlight */
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.expand {
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  float: right;
+
+  border: 2px solid green;
+  border-radius: 100px;
+  color: green;
+  font-weight: bold;
+}
+
+.totals {
+  margin-top: 5px;
+}
+
+.loan_body {
+  display: none;
+  text-align: left;
+}
+
+.loan_input {
+  margin: 30px 0;
+}
+
+input {
+  text-align: right;
+}
+
+.l_label {
+  display: block;
+}
+
+.b_input_deco {
+  display: inline-block;
+  width: 0;
+  position: relative;
+  top: 1px;
+  left: 10px;
+  
+  /* makes anything after the decorator move left so we */
+  /* can superimpose the dollarsign */
+  margin: 0 0 0 -4px;
+}
+
+.a_input {
+  text-indent: 17px;
+  direction: rtl;
+}
+
+.a_input_deco {
+  display: inline-block;
+  width: 0;
+  position: relative;
+  top: 1px;
+  right: 22px;
+}

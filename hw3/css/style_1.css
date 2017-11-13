@@ -1,0 +1,60 @@
+/**
+ * Name: Christopher Munroe, christopher_munroe1@student.uml.edu
+ * Student of COMP.4610 GUI Programming I
+ * Created: 10/10/2017
+ * CSS for style 1. Hacker-esque color and font choices.
+ **/
+
+body {
+ width: 900px;
+ /* Causes our body to center itself on the page because width is defined. */
+ margin: auto;
+ padding: 80px;
+ color: #eee;
+ background-color: #111;
+ /* Custom font is brought in by our HTML file and applied here. */
+ font-family: 'Share Tech Mono', monospace;
+}
+
+img {
+ float: right;
+}
+
+h1, h2, h3, h4, h5, #due-date {
+ color: #1f1
+}
+
+#asgn-name {
+ margin: 0;
+}
+
+#demo {
+ font-weight: normal;
+ margin: 0;
+}
+
+.code {
+ color: #00a;
+}
+
+table {
+ border-collapse: collapse;
+}
+
+table, th, td {
+ border: 1px solid #aaa;
+}
+
+th {
+ font-style: italic;
+ font-weight: normal;
+ text-align: left;
+}
+
+.points {
+ text-align: center;
+}
+
+#afterthought {
+ font-size: 11px;
+}

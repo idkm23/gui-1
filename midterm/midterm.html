@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--
+Name: Christopher Munroe, christopher_munroe1@student.uml.edu
+Student of COMP.4610 GUI Programming I
+Created: 10/25/2017
+
+auto deals calculator!
+provides two types of options, loans and leases. there are two forms for each type
+to allow the user to compare.
+-->
+
+<html>
+  <head>
+    <link rel="stylesheet" href="css/midterm.css">
+    <title>
+      Midterm
+    </title>
+  </head>
+  <body>
+    <div id="main_wrap">
+      <h1>Auto Deals Calculator</h1>
+
+    <div class="loan_input">
+      <span class="l_label">Estimated Miles Per Year:</span>
+      <input class="discount" type="text" value="0" maxlength="7"
+             onclick="this.select()" onkeypress="validate_int(event)"
+             onkeyup="calculateAll(event)">
+    </div>
+
+      <div class="loan_form">
+        <div class="loan_header" onclick="toggle_expand(this)">
+          Loan 1
+          <span class="expand">+</span>
+          <div class="totals">
+            <div class="total_cost">
+              $<span class="total_cost_val">0.00</span> total cost
+            </div>
+            <div class="per_month">
+              $<span class="per_month_val">0.00</span> / per month
+            </div>
+            <div class="per_mile">
+              $<span class="per_mile_val">0.00</span> / cost per mile
+            </div>
+          </div>
+        </div>
+        <div class="loan_body">
+          <div class="loan_input">
+            <span class="l_label">MSRP:</span>
+            <span class="b_input_deco">$</span>
+            <input class="msrp" type="text" value="0" maxlength="10"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Discount:</span>
+            <span class="b_input_deco">$</span>
+            <input class="discount" type="text" value="0" maxlength="10"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Rebate:</span>
+            <span class="b_input_deco">$</span>
+            <input class="rebate" type="text" value="0" maxlength="10"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Down Payment:</span>
+            <span class="b_input_deco">$</span>
+            <input class="downpay" type="text" value="0" maxlength="10"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Months To Pay:</span>
+            <input class="months" type="text" value="0" maxlength="3" 
+                   onclick="this.select()" onkeypress="validate_int(event)"
+                   onkeyup="calculate(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Interest Per Year:</span>
+            <input class="interest a_input" type="text" value="0" maxlength="5"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate(event)">
+            <span class="a_input_deco">%</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="loan_form">
+        <div class="loan_header" onclick="toggle_expand(this)">
+          Loan 2
+          <span class="expand">+</span>
+          <div class="totals">
+            <div class="total_cost">
+              $<span class="total_cost_val">0.00</span> total cost
+            </div>
+            <div class="per_month">
+              $<span class="per_month_val">0.00</span> / per month
+            </div>
+            <div class="per_mile">
+              $<span class="per_mile_val">0.00</span> / cost per mile
+            </div>
+
+          </div>
+        </div>
+        <div class="loan_body">
+          <div class="loan_input">
+            <span class="l_label">MSRP:</span>
+            <span class="b_input_deco">$</span>
+            <input class="msrp" type="text" value="0" maxlength="10"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Discount:</span>
+            <span class="b_input_deco">$</span>
+            <input class="discount" type="text" value="0" maxlength="10"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Rebate:</span>
+            <span class="b_input_deco">$</span>
+            <input class="rebate" type="text" value="0" maxlength="10"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Down Payment:</span>
+            <span class="b_input_deco">$</span>
+            <input class="downpay" type="text" value="0" maxlength="10"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Months To Pay:</span>
+            <input class="months" type="text" value="0" maxlength="3" 
+                   onclick="this.select()" onkeypress="validate_int(event)"
+                   onkeyup="calculate(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Interest Per Year:</span>
+            <input class="interest a_input" type="text" value="0" maxlength="5"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate(event)">
+            <span class="a_input_deco">%</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="loan_form">
+        <div class="loan_header" onclick="toggle_expand(this)">
+          Lease 1
+          <span class="expand">+</span>
+          <div class="totals">
+            <div class="total_cost">
+              $<span class="total_cost_val">0.00</span> est. total cost
+            </div>
+            <div class="per_month">
+              $<span class="per_month_val">0.00</span> / est. per month
+            </div>
+            <div class="per_mile">
+              $<span class="per_mile_val">0.00</span> / cost per mile
+            </div>
+          </div>
+        </div>
+
+        <div class="loan_body">
+
+          <div class="loan_input">
+            <span class="l_label">Monthly Payment:</span>
+            <span class="b_input_deco">$</span>
+            <input class="ppmonth" type="text" value="0" maxlength="7"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate_lease(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Capital Cost Reduction:</span>
+            <span class="b_input_deco">$</span>
+            <input class="ccreduction" type="text" value="0" maxlength="10"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate_lease(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Months:</span>
+            <input class="months" type="text" value="0" maxlength="3" 
+                   onclick="this.select()" onkeypress="validate_int(event)"
+                   onkeyup="calculate_lease(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Contract Miles Per Year:</span>
+            <input class="cmpyear" type="text" value="0" maxlength="7" 
+                   onclick="this.select()" onkeypress="validate_int(event)"
+                   onkeyup="calculate_lease(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Fee Per Overcharge Mile:</span>
+            <span class="b_input_deco">$</span>
+            <input class="overcharge" type="text" value="0" maxlength="4"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate_lease(event)">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="loan_form">
+        <div class="loan_header" onclick="toggle_expand(this)">
+          Lease 2
+          <span class="expand">+</span>
+          <div class="totals">
+            <div class="total_cost">
+              $<span class="total_cost_val">0.00</span> est. total cost
+            </div>
+            <div class="per_month">
+              $<span class="per_month_val">0.00</span> / est. per month
+            </div>
+            <div class="per_mile">
+              $<span class="per_mile_val">0.00</span> / cost per mile
+            </div>
+          </div>
+        </div>
+
+        <div class="loan_body">
+
+          <div class="loan_input">
+            <span class="l_label">Monthly Payment:</span>
+            <span class="b_input_deco">$</span>
+            <input class="ppmonth" type="text" value="0" maxlength="7"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate_lease(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Capital Cost Reduction:</span>
+            <span class="b_input_deco">$</span>
+            <input class="ccreduction" type="text" value="0" maxlength="10"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate_lease(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Months:</span>
+            <input class="months" type="text" value="0" maxlength="3" 
+                   onclick="this.select()" onkeypress="validate_int(event)"
+                   onkeyup="calculate_lease(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Contract Miles Per Year:</span>
+            <input class="cmpyear" type="text" value="0" maxlength="7" 
+                   onclick="this.select()" onkeypress="validate_int(event)"
+                   onkeyup="calculate_lease(event)">
+          </div>
+
+          <div class="loan_input">
+            <span class="l_label">Fee Per Overcharge Mile:</span>
+            <span class="b_input_deco">$</span>
+            <input class="overcharge" type="text" value="0" maxlength="4"
+                   onclick="this.select()" onkeypress="validate_decimal(event)"
+                   onkeyup="calculate_lease(event)">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <script src="js/midterm.js"></script>
+  </body>
+</html>

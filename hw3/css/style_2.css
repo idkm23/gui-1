@@ -1,0 +1,75 @@
+/**
+ * Name: Christopher Munroe, christopher_munroe1@student.uml.edu
+ * Student of COMP.4610 GUI Programming I
+ * Created: 10/10/2017
+ * CSS for style 2. Warmer colors and additional spacing.
+ **/
+
+body {
+ width: 900px;
+ /* Causes our body to center itself on the page because width is defined. */
+ margin: auto;
+ padding: 80px;
+ color: #111;
+ background-color: #FFDA90;
+}
+
+img {
+ float: right;
+ border: 2px inset black;
+ background-image: url(../res/Flamesexample.gif);
+ /* the gif isnt prefectly sized so we must adjust it's positioning. */
+ background-position: 0px 130px;
+}
+
+h1, h2, h3, h4, h5, #due-date {
+ color: #800
+}
+
+#asgn-name {
+ margin: 0;
+}
+
+#demo {
+ font-weight: normal;
+ margin: 0;
+}
+
+.code {
+ color: #00a;
+}
+
+table {
+ border-collapse: collapse;
+}
+
+table, th, td {
+ border: 2px solid #000;
+}
+
+th, td {
+ /* Important padding to make the table more readable. */
+ padding: 15px;
+}
+
+th {
+ font-size: 20px;
+ text-align: left;
+}
+
+.points {
+ text-align: center;
+}
+
+#afterthought {
+ font-size: 11px;
+}
+
+/* Spacing to make bullets more legible. */
+ol li {
+ margin-top: 10px;
+}
+
+ul li {
+ margin-bottom: 10px;
+}

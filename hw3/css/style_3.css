@@ -1,0 +1,101 @@
+/**
+ * Name: Christopher Munroe, christopher_munroe1@student.uml.edu
+ * Student of COMP.4610 GUI Programming I
+ * Created: 10/10/2017
+ * CSS for style 3. Builds on style 2 by adding color to the table,
+ * skinnier body, and different colors for the <body> and <html>.
+ **/
+
+html {
+ background-color: #FFDA90;
+}
+
+body {
+ width: 700px;
+ /* Causes our body to center itself on the page because width is defined. */
+ margin: 40px auto;
+ padding: 11px 30px 30px 30px;
+ color: #111;
+ background-color: #FFECC7;
+ /* Custom font is brought in by our HTML file and applied here. */
+ font-family: 'Roboto', sans-serif;
+}
+
+img {
+ float: right;
+ background-image: url(../res/Flamesexample.gif);
+ /* the gif isnt prefectly sized so we must adjust it's positioning. */
+ background-position: 0px 130px;
+ /* Bends the border for a decorative affect. */
+ border-radius: 0px 200px;
+ border: 3px solid black;
+}
+
+h1, h2, h3, h4, h5, #due-date {
+ color: #800
+}
+
+#asgn-name {
+ margin: 0;
+}
+
+#demo {
+ font-weight: normal;
+ margin: 0;
+}
+
+.code {
+ color: #0a0;
+}
+
+table {
+ border-collapse: collapse;
+}
+
+table, th, td {
+ border: 2px solid #000;
+}
+
+th, td {
+ padding: 15px;
+}
+
+th {
+ font-size: 20px;
+ text-align: left;
+ background-color: #AAAAAA;
+}
+
+td {
+ background-color: #DDDDDD;
+}
+
+.points {
+ text-align: center;
+}
+
+#afterthought {
+ font-size: 11px;
+}
+
+ol li {
+ margin-top: 10px;
+}
+
+ul li {
+ margin-bottom: 10px;
+}
+
+/* Modifies the anchor tag to only underline on hover, instead of by default. */
+a { 
+ text-decoration: none;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
+/* Makes visited and unvisited links identical in color. */
+a:visited {
+ color: #00e;
+}
