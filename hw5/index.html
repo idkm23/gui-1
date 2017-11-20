@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+Name: Christopher Munroe, christopher_munroe1@student.uml.edu
+Student of COMP.4610 GUI Programming I
+Created: 11/12/2017
+
+Creates a chart of price and fuel consumption in a single page web app.
+-->
+
+<html>
+  <head>
+    <link rel="stylesheet" href="css/a4.css">
+    <title>
+      A5 
+    </title>
+  </head>
+  <body>
+    <div id="form_wrap">
+      <h1>Auto Price Chart</h1>
+      <div id="error"></div>
+      <form id="input_form">
+        <fieldset>
+          <div class="input_col">
+            <span class="label">Prices (x-axis):</span>
+            <div id="price_wrap">
+              <div class="input_single">
+                <span class="b_input_deco">$</span>
+                <input type="text" maxlength="8" name="price1" required
+                       onclick="this.select()" onkeypress="validate_int(event)">
+              </div>
+              <div class="input_single">
+                <span class="b_input_deco">$</span>
+                <input type="text" maxlength="8" name="price2" required
+                       onclick="this.select()" onkeypress="validate_int(event)">
+              </div>
+            </div>
+            <div class="add_input" onclick="add_entry()">ADD ENTRY</div>
+          </div>
+          <div class="input_col">
+            <span class="label">MPG (y-axis):</span>
+            <div id="mpg_wrap">
+              <div class="input_single">
+                <input type="text" maxlength="3"
+                       name="mpg1" required
+                       onclick="this.select()" onkeypress="validate_int(event)">
+              </div>
+              <div class="input_single">
+                <input type="text" maxlength="3"
+                       name="mpg2" required
+                       onclick="this.select()" onkeypress="validate_int(event)">
+              </div>
+            </div>
+            <div class="add_input" onclick="add_entry()">ADD ENTRY</div>
+          </div>
+          <label class="label" for="months">Months to Pay:</label>
+          <div id="months" class="input_single">
+            <input type="text" maxlength="3"
+                   name="months" required
+                   onclick="this.select()" onkeypress="validate_int(event)">
+          </div>
+
+          <span class="label">Miles Driven Per Year:</span>
+          <div id="mpy" class="input_single">
+            <input type="text" maxlength="6" name="mpy" required
+                   onclick="this.select()" onkeypress="validate_int(event)">
+          </div>
+
+          <span class="label">Cost per gallon:</span>
+          <div id="cpg" class="input_single">
+            <span class="b_input_deco">$</span>
+            <input type="text" maxlength="4" name="cpg" required
+                   onclick="this.select()" onkeypress="validate_decimal(event)">
+          </div>
+
+          <div id="submit" onclick="update()">SUBMIT</div>
+        </fieldset> 
+      </form>
+    </div>
+
+    <table id="table">
+      <tr>
+        <th>Price/Fuel<br />consumption</th>
+        <th>$ <span id="p1">-</span></th>
+      </tr>
+      <tr>
+        <th><span id="mpg1">-</span> MPG</th>
+        <td class="empty">-</td>
+      </tr>
+    </table>
+    <!-- jqeury include -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/a4.js"></script>
+  </body>
+</html>

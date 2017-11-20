@@ -1,0 +1,173 @@
+/**
+ * Name: Christopher Munroe, christopher_munroe1@student.uml.edu
+ * Student of COMP.4610 GUI Programming I
+ * Created: 11/12/2017
+ * Creates a chart of price and fuel consumption in a single page web app.
+ **/
+
+body {
+  display: block;
+  overflow: visible;
+  font-size: 16px;
+  font-family: 'helvetica neue', 'helvetica', arial, sans-serif;
+  color: #111;
+  line-height: 1.4;
+  min-width: 900px;
+}
+
+#form_wrap {
+  display: inline-block;
+  margin: 60px 100px;
+  padding: 20px;
+  background: #E9E9E9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#input_form {
+  display: inline-block;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #aaa;
+  text-align: left;
+  color: #0077ca;
+  font-weight: bold;
+  width: 450px;
+}
+
+.seperator {
+  width: 100%;
+  height: 0;
+  margin-top: 20px;
+  border-bottom: 1px solid #aaa;
+}
+
+#submit {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  background-color: #5A7CC2;
+  border: 3px outset #5A7CC2;
+  cursor: pointer;
+  margin-top: 30px;
+  font-weight: bold;
+
+  font-size: 16px;
+  font-family: 'helvetica neue', 'helvetica', arial, sans-serif;
+  line-height: 1.4;
+
+  /* disables highlight */
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+#submit:active {
+  border: 3px inset #5A7CC2;
+}
+
+#error {
+  font-weight: bold;
+  color: red;
+}
+
+input.error {
+  border-color: red;
+}
+
+label.error {
+  color: red;
+  margin: 0 10px;
+}
+
+#price_wrap, #mpg_wrap {
+  display: inline-block;
+}
+
+input {
+  text-align: right;
+  padding-right: 5px;
+  margin-bottom: 4px;
+}
+
+.add_input {
+  display: block;
+  text-align: center;
+  padding: 2px;
+  color: white;
+  background-color: #5A7CC2;
+  border: 3px outset #5A7CC2;
+  cursor: pointer;
+  width: 168px;
+
+  /* disables highlight */
+  -webkit-user-select: none; /* Chrome/Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.add_input:active {
+  border: 3px inset #5A7CC2;
+}
+
+.input_single {
+  display: block;
+}
+
+.label {
+  display: block;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.b_input_deco {
+  display: inline-block;
+  width: 0;
+  position: relative;
+  top: 1px;
+  left: 10px;
+  
+  /* makes anything after the decorator move left so we */
+  /* can superimpose the dollarsign */
+  margin: 0 0 0 -4px;
+}
+
+table {
+  position: absolute;
+  top: 200px;
+  left: 900px;
+  border-collapse: collapse;
+}
+
+/* table section */
+td, th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #C6DEFF;
+}
+
+/* exact values hidden in the html */
+.mi_exact {
+  display: none;
+}
+
+.empty {
+  background-color: #DDDDDD;
+}
+
+fieldset {
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  padding: 0;
+  border-width: 0px;
+}
