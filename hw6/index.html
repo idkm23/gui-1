@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+Name: Christopher Munroe, christopher_munroe1@student.uml.edu
+Student of COMP.4610 GUI Programming I
+Created: 12/3/2017
+
+Creates a chart of price and fuel consumption in a multi-tab web app. Uses sliders and input fields.
+-->
+
+<html>
+  <head>
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/a4.css">
+
+    <!-- jqeury include -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="libs/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+
+    <title>
+      A5 
+    </title>
+  </head>
+  <body>
+    <div id="tabs">
+      <ul id="tablist">
+        <li id="create_new_li"><a id="create_new" onclick="create_tab()">Create New</a>
+        <li id="close_all_li"><a id="close_all" onclick="close_all_tabs()">Close All</a>
+      </ul>
+
+      <div id="form_wrap">
+        <h2>Auto Price Chart</h2>
+        <div id="error"></div>
+        <form id="input_form">
+          <fieldset>
+            <div class="input_col">
+              <span class="label">Prices (x-axis):</span>
+              <div id="price_wrap">
+                <div class="input_single">
+                  <span class="b_input_deco">$</span>
+                  <input type="text" maxlength="8" name="price1" required
+                         autocomplete="off"
+                         onclick="this.select()" onkeypress="validate_int(event)">
+                  <div class="slider" id="slider_price1"></div>
+                </div>
+                <div class="input_single">
+                  <span class="b_input_deco">$</span>
+                  <input type="text" maxlength="8" name="price2" required
+                         autocomplete="off"
+                         onclick="this.select()" onkeypress="validate_int(event)">
+                  <div class="slider" id="slider_price2"></div>
+                </div>
+              </div>
+              <div class="add_input" onclick="add_entry()">ADD ENTRY</div>
+            </div>
+            <div class="input_col">
+              <span class="label">MPG (y-axis):</span>
+              <div id="mpg_wrap">
+                <div class="input_single">
+                  <input type="text" maxlength="3"
+                         name="mpg1" required autocomplete="off"
+                         onclick="this.select()" onkeypress="validate_int(event)">
+                  <div class="slider" id="slider_mpg1"></div>
+                </div>
+                <div class="input_single">
+                  <input type="text" maxlength="3"
+                         name="mpg2" required autocomplete="off"
+                         onclick="this.select()" onkeypress="validate_int(event)">
+                  <div class="slider" id="slider_mpg2"></div>
+                </div>
+              </div>
+              <div class="add_input" onclick="add_entry()">ADD ENTRY</div>
+            </div>
+            <label class="label" for="months">Months to Pay:</label>
+            <div id="months" class="input_single">
+              <input type="text" maxlength="3"
+                     name="months" required autocomplete="off"
+                     onclick="this.select()" onkeypress="validate_int(event)">
+               <div class="slider" id="slider_months"></div>
+            </div>
+
+            <span class="label">Miles Driven Per Year:</span>
+            <div id="mpy" class="input_single">
+              <input type="text" maxlength="6" name="mpy" required onkeyup="update()"
+                     autocomplete="off"
+                     onclick="this.select()" onkeypress="validate_int(event)">
+               <div class="slider" id="slider_mpy"></div>
+            </div>
+
+            <span class="label">Cost per gallon:</span>
+            <div id="cpg" class="input_single">
+              <span class="b_input_deco">$</span>
+              <input type="text" maxlength="4" name="cpg" required onkeyup="update()"
+                     autocomplete="off"
+                     onclick="this.select()" onkeypress="validate_decimal(event)">
+               <div class="slider" id="slider_cpg"></div>
+            </div>
+          </fieldset> 
+        </form>
+      </div>
+    </div>
+    <script src="js/a4.js"></script>
+  </body>
+</html>
