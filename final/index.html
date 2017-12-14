@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+Name: Christopher Munroe, christopher_munroe1@student.uml.edu
+Student of COMP.4610 GUI Programming I
+Created: 12/3/2017
+
+my portfolio project. anyone can edit it without logging in unfortunately. You can add remove images, hyperlink them to friends, view in full size, change color, and rotate.
+-->
+
+<html lang="en-US">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="js/index.js"></script>
+<body>
+<div id=editorwrap>
+    <div id="overlay" onclick="show_editor(false)"></div>
+    <div id="editor">
+        <div id="editornav">
+            <i class="fa fa-times fa-lg close-editor" onclick="show_editor(false)"></i>
+        </div>
+        <div id="editor-canvas-wrap">
+            <canvas id="editor-canvas">
+                Your browser doesn't support canvas.
+            </canvas>
+        </div>
+        <div class="editor-input">
+            <div class="editor-input-label">Brightness:</div>
+            <input id="brightness-slider" type="range"
+                min="0" max="2" step="0.05" value="1">
+        </div>
+        <div class="editor-input">
+            <div class="editor-input-label">Contrast:</div>
+            <input id="contrast-slider" type="range"
+                min="0" max="2" step="0.05" value="1">
+        </div>
+        <div class="editor-input">
+            <div class="editor-input-label">Hue:</div>
+            <input id="hue-slider" type="range"
+                min="0" max="2" step="0.05" value="1">
+        </div>
+        <div class="editor-input">
+            <div class="editor-input-label">Rotate:</div>
+            <button id="rotate-button" onclick="rotate()">Rotate</button>
+        </div>
+        <div class="save_editor_btn" onclick="save_editor_img()">Save</div>
+    </div>
+</div>
+<div id="nav">
+  <div id="login"></div>
+  <div id="logout">Logout</div>
+</div>
+<div id="mainwrap">
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <div id="mainheaderwrap">
+      <h1>Chris' Portfolio</h1>
+      <div id="upload-options">
+          <input type="file" id="file" name="file"/>
+          <button ng-click="add()">Upload</button>
+      </div>
+    </div>
+    <div id="images"></div>
+  </div>
+</div>
+
+</body>
+</html>
